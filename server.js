@@ -14,8 +14,8 @@ app.use(cors({
 
 const io = socketIo(server, {
     cors: {
-        origin: "*", 
-        methods: ["GET", "POST"],
+        origins: "*:*",
+        methods: ["GET", "POST"]
     }
 });
 
@@ -101,7 +101,7 @@ const removeInactiveGroups = () => {
 
 setInterval(removeInactiveGroups, 3600000);
 
-const port = 3000;
+const port = 3001;
 server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
