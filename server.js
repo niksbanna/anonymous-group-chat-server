@@ -101,7 +101,7 @@ const removeInactiveGroups = () => {
 
 setInterval(removeInactiveGroups, 3600000);
 
-const port = 5000;
+const port = 3000;
 server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
